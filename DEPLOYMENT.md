@@ -91,6 +91,12 @@ does call OpenAI and Pinecone and may incur API charges.
 
 - **Repository missing:** check GitHub account/workspace and private-repo permission;
   try entering `owner/repository` manually in the Streamlit form.
+- **"You do not have admin permissions":** open the account menu > Settings >
+  Linked accounts. Under Source control, the connected GitHub username must be
+  `ajaybcd`, which owns this repository. The email identity can remain unchanged.
+  If GitHub shows `ajd-2026`, disconnect that source-control connection and reconnect
+  with `ajaybcd`, completing the GitHub sign-in and permission prompts yourself.
+  Do not delete the Streamlit account. Retry the repository after linking the owner.
 - **Missing setting:** add the three root-level TOML settings in app Secrets, then restart.
 - **Missing manifest/chunks:** upload both required files using the paths listed above.
 - **Source fingerprint mismatch:** restore the exact original chunk bytes; do not edit
