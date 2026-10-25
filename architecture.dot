@@ -1,0 +1,51 @@
+
+digraph ContractLens {
+  graph [rankdir=TB, bgcolor="transparent", pad="0.25", nodesep="0.35", ranksep="0.65", compound=true, fontname="Arial"];
+  node [shape=box, style="rounded,filled", fillcolor="#FFFFFF", color="#A9C4BC", fontcolor="#133D39", fontname="Arial", fontsize=13, margin="0.16,0.12"];
+  edge [color="#668B82", fontname="Arial", fontsize=11, fontcolor="#365D54", arrowsize=0.75];
+
+  subgraph cluster_ingestion {
+    label="1  DOCUMENT INGESTION"; fontcolor="#133D39"; color="#C7DDD5"; style="rounded"; margin=22;
+    pdf [label="Contract PDFs\n30 documents · 90 pages"];
+    extract [label="Extract and inspect text\npypdf · filename + physical PDF page"];
+    chunks [label="Recursive token-aware chunks\n600-token limit · target overlap 100\n90 chunks in this corpus"];
+    embed [label="OpenAI embeddings\ntext-embedding-3-small\n1,536 dimensions", fillcolor="#EAF2FB", color="#9AB5D6"];
+    pinecone [label="Pinecone vector index\nfintech-contracts · cosine similarity\nVerified namespace · 90 vectors", fillcolor="#DDF1EA", color="#448B77", penwidth=2];
+    local [label="Local source records and manifests\nOriginal text · pages · chunk IDs · hashes", shape=folder, fillcolor="#F0F3F2"];
+    pdf -> extract -> chunks -> embed -> pinecone;
+    chunks -> local [label="preserve evidence"];
+  }
+
+  subgraph cluster_answer {
+    label="2  QUESTION ANSWERING WITH LANGGRAPH"; fontcolor="#133D39"; color="#C7DDD5"; style="rounded"; margin=22;
+    ui [label="Streamlit chatbot\nQuestion + optional contract scope", fillcolor="#E3F0ED", color="#448B77"];
+    scope [label="Resolve requested contracts\nNamed / selected sources or corpus search"];
+    queryembed [label="Embed the question\nSame OpenAI embedding model", fillcolor="#EAF2FB", color="#9AB5D6"];
+    search [label="Pinecone cosine search\nDefault k = 5\nPer named contract or global"];
+    provenance [label="Verify retrieved evidence\nLocal chunk text and metadata checks"];
+    route [label="Assess ambiguity and evidence\nLocal guards + model routing", shape=diamond, fillcolor="#FFF4DA", color="#C9AE67"];
+    clarify [label="Ask for clarification or return\ninsufficient evidence\nNo answer generation", fillcolor="#FFF4DA", color="#C9AE67"];
+    generate [label="Generate cited claims\ngpt-4.1-mini · evidence-span IDs", fillcolor="#EAF2FB", color="#9AB5D6"];
+    exact [label="Strict citation validation\nSource IDs · exact original spans"];
+    review [label="Automated claim-support review\nSeparate model check", fillcolor="#EAF2FB", color="#9AB5D6"];
+    answer [label="Display accepted answer\nCitations · source pages · quotations", fillcolor="#DDF1EA", color="#448B77", penwidth=2];
+    withheld [label="Withhold rejected answer\nSafe validation-failure message", fillcolor="#FCEAE7", color="#C68E83"];
+    ui -> scope -> queryembed -> search -> provenance -> route;
+    route -> clarify [label="ambiguous / insufficient"];
+    route -> generate [label="ready"];
+    generate -> exact;
+    exact -> review [label="pass"];
+    exact -> withheld [label="fail"];
+    review -> answer [label="supported"];
+    review -> withheld [label="unsupported / uncertain / invalid"];
+  }
+
+  pinecone -> search [label="filtered vector retrieval"];
+  local -> provenance [label="integrity checks", style=dashed];
+  runs [label="Local answer reports and build log\nQuestion · sources · ranks · scores · tokens · timing", shape=folder, fillcolor="#F0F3F2"];
+  answer -> runs; clarify -> runs; withheld -> runs;
+  inspection [label="Saved run inspector and human review\nEvidence metrics · Pass / Fail notes · exports", fillcolor="#E3F0ED"];
+  runs -> inspection;
+  bank [label="20-question reference guide\nExpected results + verified source citations\nKept separate from model input", shape=folder, fillcolor="#F0F3F2"];
+  bank -> inspection [label="compare expectations", style=dashed];
+}

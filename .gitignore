@@ -1,0 +1,37 @@
+# Credentials: only the placeholder example belongs in Git.
+.env
+.env.*
+.env-*
+.streamlit/secrets.toml
+secrets.toml
+*.pem
+*.key
+
+# Python environments, generated files and local state.
+.venv*/
+venv/
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.runtime/
+*.log
+
+# Only the two required, verified data files are allowed.
+data/*
+!data/processed/
+data/processed/*
+!data/processed/chunks_recursive.jsonl
+reports/*
+!reports/upload_manifest.json
+
+# Keep local source documents, exports and backups off GitHub.
+*.pdf
+*.docx
+*.pptx
+*.zip
+*.bak
+ui_test_*/

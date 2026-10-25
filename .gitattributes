@@ -1,0 +1,10 @@
+* text=auto eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.toml text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+# Verification hashes the exact original bytes. Never convert chunk line endings.
+data/processed/chunks_recursive.jsonl -text whitespace=cr-at-eol
+# Preserve the audited v5 script's exact original bytes as well.
+answer_contracts.py -text whitespace=cr-at-eol

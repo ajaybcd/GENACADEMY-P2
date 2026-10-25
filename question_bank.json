@@ -1,0 +1,563 @@
+{
+  "schema_version": 1,
+  "description": "20 guided development questions, not a completed held-out benchmark.",
+  "chunks_sha256": "2391ca2b24d1a1b0cb6c967f5f87f8510e88d5a3138d240aa29ef835d0b9ca15",
+  "cases": [
+    {
+      "id": "Q01",
+      "category": "Fact lookup",
+      "question": "What is the financed amount in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "$82,437.00.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+          "start": 246,
+          "end": 274,
+          "quote": "FINANCED AMOUNT: $82,437.00.",
+          "sha256": "f7ebcf53d4eb6dd6b0ac7a7b759d02a7d9e7f573fc4a985f65769600839057eb",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q02",
+      "category": "Fact lookup",
+      "question": "What is the financed amount in Contract_2.pdf?",
+      "scope": [
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "$38,384.00.",
+      "references": [
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+          "start": 260,
+          "end": 288,
+          "quote": "FINANCED AMOUNT: $38,384.00.",
+          "sha256": "7b8f2c72cc0bdb242a0fbd4dd6a84445614d1fc1f7a2cb01f3b78ec98f023de7",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q03",
+      "category": "Qualified term",
+      "question": "What financing period is stated in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Up to 60 months, unless otherwise agreed upon by the parties.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 137,
+          "end": 247,
+          "quote": "CLAUSE TWO – TERM: The financing period shall be up to 60 months, unless otherwise agreed\nupon by the parties.",
+          "sha256": "a079ac0f675577c003a7e2973cc02609c8c8502f93d46748be3943612ccdd29e",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q04",
+      "category": "Fact lookup",
+      "question": "What interest rate and annual adjustment are stated in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Monthly installments carry interest of 1.2% per month and are corrected annually by CPI.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 248,
+          "end": 414,
+          "quote": "CLAUSE THREE – PAYMENT: The BORROWER shall pay monthly installments, increased by\ninterest of 1.2% per month and corrected annually by the Consumer Price Index (CPI).",
+          "sha256": "4a67c0af3484ae6df7b81226d68b25e92cf2364b3636808dcc86c9e64cd660a3",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q05",
+      "category": "Conditions",
+      "question": "What happens if an installment payment is late under Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "A penalty of 2% on the installment, late interest of 1% per month, and possible execution of the guarantee.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 691,
+          "end": 849,
+          "quote": "CLAUSE SIX – DEFAULT: Payment delay will result in a penalty of 2% on the installment, late\ninterest of 1% per month, and possible execution of the guarantee.",
+          "sha256": "08da7544129aec05b62eb070b48e2d44d5967bb0127ed3fe24f0c82891b9e2f0",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q06",
+      "category": "Fact lookup",
+      "question": "What guarantee secures Contract_1.pdf, and how long does it remain?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "The financed asset remains under fiduciary lien in favor of the bank until full settlement.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 415,
+          "end": 536,
+          "quote": "CLAUSE FOUR – GUARANTEES: The financed asset will remain under fiduciary lien in favor of\nthe BANK until full settlement.",
+          "sha256": "46ab00df6bca39afa5b6843604dccf6ff60972876d4c35688c80c9eb0324ab4f",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q07",
+      "category": "Qualified term",
+      "question": "What insurance obligation is stated in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "The borrower must obtain mandatory insurance for the financed asset, with minimum coverage as required by current legislation. The clause gives no numeric coverage limit.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 537,
+          "end": 690,
+          "quote": "CLAUSE FIVE – INSURANCE: The BORROWER must contract mandatory insurance for the\nfinanced asset, with minimum coverage as required by current legislation.",
+          "sha256": "d5211c7d7d3ddd873b6f547e7702a38ca0e9ec4f5f90002a61f17d8ccf4a84a5",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q08",
+      "category": "Conditions",
+      "question": "What does Contract_1.pdf say about notification when termination follows a breach?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "The breach clause says breach of obligations results in termination and enforcement of guarantees, regardless of notification. Do not infer a general voluntary termination right.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 850,
+          "end": 1006,
+          "quote": "CLAUSE SEVEN – TERMINATION: Breach of obligations will result in termination of the\nagreement and enforcement of the guarantees, regardless of notification.",
+          "sha256": "374074b384ce57eab7ef90d79e703b34803b47f0c1e082a924e2ddd7e7b62940",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q09",
+      "category": "Fact lookup",
+      "question": "Which courts are selected for disputes in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "The Courts of New York, NY.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 1007,
+          "end": 1133,
+          "quote": "CLAUSE EIGHT – JURISDICTION: The parties elect the Courts of New York, NY, to settle any\ndisputes arising from this agreement.",
+          "sha256": "a9a7ec133bbf5521aab3eed82984f225c367213bc81a1e9bdb8f80a14e0cacde",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q10",
+      "category": "Fact lookup",
+      "question": "What is the purpose stated in Contract_2.pdf?",
+      "scope": [
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Granting financing to the borrower for acquisition of the asset described in the preamble.",
+      "references": [
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+          "start": 0,
+          "end": 136,
+          "quote": "CLAUSE ONE – PURPOSE: This agreement aims to grant financing to the BORROWER for the\nacquisition of the asset described in the preamble.",
+          "sha256": "ea4f23a437d5bc8f7d6ab4ac060246cf8c3a3d90e749dd2abeb379a1cd316f20",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+            "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+            "rec-620cfdc99bd70ab5b5e5ee1ba280c42e094da58b49eaaa0bfa4975a92da54b7a"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q11",
+      "category": "Multiple contracts",
+      "question": "Compare the financed amounts in Contract_1.pdf and Contract_2.pdf. State each amount and identify which contract has the higher amount.",
+      "scope": [
+        "Contract_1.pdf",
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Contract_1.pdf: $82,437.00. Contract_2.pdf: $38,384.00. Contract_1.pdf has the higher amount.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+          "start": 246,
+          "end": 274,
+          "quote": "FINANCED AMOUNT: $82,437.00.",
+          "sha256": "f7ebcf53d4eb6dd6b0ac7a7b759d02a7d9e7f573fc4a985f65769600839057eb",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e"
+          ]
+        },
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+          "start": 260,
+          "end": 288,
+          "quote": "FINANCED AMOUNT: $38,384.00.",
+          "sha256": "7b8f2c72cc0bdb242a0fbd4dd6a84445614d1fc1f7a2cb01f3b78ec98f023de7",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q12",
+      "category": "Multiple contracts",
+      "question": "Compare the interest rates and annual adjustments in Contract_1.pdf and Contract_2.pdf.",
+      "scope": [
+        "Contract_1.pdf",
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Both state interest of 1.2% per month and annual CPI correction.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 248,
+          "end": 414,
+          "quote": "CLAUSE THREE – PAYMENT: The BORROWER shall pay monthly installments, increased by\ninterest of 1.2% per month and corrected annually by the Consumer Price Index (CPI).",
+          "sha256": "4a67c0af3484ae6df7b81226d68b25e92cf2364b3636808dcc86c9e64cd660a3",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        },
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+          "start": 248,
+          "end": 414,
+          "quote": "CLAUSE THREE – PAYMENT: The BORROWER shall pay monthly installments, increased by\ninterest of 1.2% per month and corrected annually by the Consumer Price Index (CPI).",
+          "sha256": "4a67c0af3484ae6df7b81226d68b25e92cf2364b3636808dcc86c9e64cd660a3",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+            "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+            "rec-620cfdc99bd70ab5b5e5ee1ba280c42e094da58b49eaaa0bfa4975a92da54b7a"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q13",
+      "category": "Multiple contracts",
+      "question": "Compare the late-payment charges in Contract_1.pdf and Contract_2.pdf.",
+      "scope": [
+        "Contract_1.pdf",
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Both state a penalty of 2% on the installment and late interest of 1% per month, with possible execution of the guarantee.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 691,
+          "end": 849,
+          "quote": "CLAUSE SIX – DEFAULT: Payment delay will result in a penalty of 2% on the installment, late\ninterest of 1% per month, and possible execution of the guarantee.",
+          "sha256": "08da7544129aec05b62eb070b48e2d44d5967bb0127ed3fe24f0c82891b9e2f0",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        },
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+          "start": 691,
+          "end": 849,
+          "quote": "CLAUSE SIX – DEFAULT: Payment delay will result in a penalty of 2% on the installment, late\ninterest of 1% per month, and possible execution of the guarantee.",
+          "sha256": "08da7544129aec05b62eb070b48e2d44d5967bb0127ed3fe24f0c82891b9e2f0",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+            "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+            "rec-620cfdc99bd70ab5b5e5ee1ba280c42e094da58b49eaaa0bfa4975a92da54b7a"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q14",
+      "category": "Multiple contracts",
+      "question": "Compare the guarantees in Contract_1.pdf and Contract_2.pdf.",
+      "scope": [
+        "Contract_1.pdf",
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "In each, the financed asset remains under fiduciary lien in favor of the bank until full settlement.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 415,
+          "end": 536,
+          "quote": "CLAUSE FOUR – GUARANTEES: The financed asset will remain under fiduciary lien in favor of\nthe BANK until full settlement.",
+          "sha256": "46ab00df6bca39afa5b6843604dccf6ff60972876d4c35688c80c9eb0324ab4f",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        },
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+          "start": 415,
+          "end": 536,
+          "quote": "CLAUSE FOUR – GUARANTEES: The financed asset will remain under fiduciary lien in favor of\nthe BANK until full settlement.",
+          "sha256": "46ab00df6bca39afa5b6843604dccf6ff60972876d4c35688c80c9eb0324ab4f",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+            "rec-86ad5d30d4a6f659cfabdd956625ab1e9e990d218a48ec4ccfa8831d1de22e52",
+            "rec-620cfdc99bd70ab5b5e5ee1ba280c42e094da58b49eaaa0bfa4975a92da54b7a"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q15",
+      "category": "Multiple contracts",
+      "question": "What types of financing agreements are Contract_1.pdf and Contract_2.pdf?",
+      "scope": [
+        "Contract_1.pdf",
+        "Contract_2.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "Contract_1.pdf is a car financing agreement; Contract_2.pdf is a motorcycle financing agreement.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+          "start": 0,
+          "end": 23,
+          "quote": "CAR FINANCING AGREEMENT",
+          "sha256": "551d7c710b74959f1b722761698616900da40acdd6c1a6d18bc763afeb9a0da8",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e"
+          ]
+        },
+        {
+          "source": "Contract_2.pdf",
+          "pdf_page": 1,
+          "chunk_id": "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8",
+          "start": 0,
+          "end": 30,
+          "quote": "MOTORCYCLE FINANCING AGREEMENT",
+          "sha256": "097c72e5961f66312378979f27bbb379777482c4b34b1af9a55ccc9f4a0ed633",
+          "gold_chunk_ids": [
+            "rec-25d5197ae60d888e15bdd94935c89e996460d189c75e0df8c84179f6d77d82c8"
+          ]
+        }
+      ],
+      "background_references": []
+    },
+    {
+      "id": "Q16",
+      "category": "Ambiguous",
+      "question": "Can I terminate the agreement?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "needs_clarification",
+      "expected_answer": "Ask whether the user is the borrower or lender and whether this concerns breach or another reason. Do not assume a voluntary termination right.",
+      "references": [],
+      "background_references": []
+    },
+    {
+      "id": "Q17",
+      "category": "Ambiguous",
+      "question": "What is the repayment deadline?",
+      "scope": [],
+      "expected_status": "needs_clarification",
+      "expected_answer": "Ask which agreement and whether the user means the financing term, final repayment date, or an installment due date.",
+      "references": [],
+      "background_references": []
+    },
+    {
+      "id": "Q18",
+      "category": "Unanswerable",
+      "question": "What is my current outstanding balance?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "insufficient_evidence",
+      "expected_answer": "Insufficient evidence: a signed contract's original financed amount does not establish a current account balance.",
+      "references": [],
+      "background_references": []
+    },
+    {
+      "id": "Q19",
+      "category": "Unanswerable",
+      "question": "What is the final repayment date in Contract_1.pdf?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "insufficient_evidence",
+      "expected_answer": "Insufficient evidence for an exact final repayment date. Do not calculate it from the signature date and an up-to-60-month term.",
+      "references": [],
+      "background_references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 137,
+          "end": 247,
+          "quote": "CLAUSE TWO – TERM: The financing period shall be up to 60 months, unless otherwise agreed\nupon by the parties.",
+          "sha256": "a079ac0f675577c003a7e2973cc02609c8c8502f93d46748be3943612ccdd29e",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "category": "Unsupported inference",
+      "question": "Does the termination clause establish that breach is the only possible reason for termination?",
+      "scope": [
+        "Contract_1.pdf"
+      ],
+      "expected_status": "answered",
+      "expected_answer": "The clause establishes that breach results in termination and enforcement of guarantees regardless of notification. It does not establish exclusivity; do not assert all other termination grounds are excluded.",
+      "references": [
+        {
+          "source": "Contract_1.pdf",
+          "pdf_page": 2,
+          "chunk_id": "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+          "start": 850,
+          "end": 1006,
+          "quote": "CLAUSE SEVEN – TERMINATION: Breach of obligations will result in termination of the\nagreement and enforcement of the guarantees, regardless of notification.",
+          "sha256": "374074b384ce57eab7ef90d79e703b34803b47f0c1e082a924e2ddd7e7b62940",
+          "gold_chunk_ids": [
+            "rec-097153654ef3a9e89b74bd85ac432fed46c1354bc39c7ca457d2310ab33b416e",
+            "rec-c292ac985e04f005ca89c2f8504b4c99e46ad2dec6f4ea106932e8aebe3b6b89",
+            "rec-6f578c3633f682866c9e4ab982ca0b7efb3450c5faf4b94daba6c50ad7d51acb"
+          ]
+        }
+      ],
+      "background_references": []
+    }
+  ]
+}
